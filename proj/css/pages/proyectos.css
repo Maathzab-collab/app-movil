@@ -1,0 +1,5 @@
+/* =====================================================
+   VENTANA: Proyectos / prácticas (proyectos.html)
+   ===================================================== */
+.upload.big{flex-direction:column;justify-content:center;min-height:160px;text-align:center}
+.upload.big .file-name{flex:none}

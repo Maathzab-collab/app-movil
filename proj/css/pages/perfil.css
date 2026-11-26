@@ -1,0 +1,18 @@
+/* =====================================================
+   VENTANA: Mi perfil (perfil.html)
+   ===================================================== */
+.hero.tall{padding-bottom:84px}
+.scroll.avatar-first{margin-top:-64px}
+
+.avatar{
+  position:relative;display:block;margin:0 auto 12px;width:116px;height:116px;border:5px solid #fff;border-radius:50%;
+  background:#eef1ff;color:var(--blue);box-shadow:0 10px 24px rgba(82,113,255,.3);padding:0;
+}
+.avatar .face{width:100%;height:100%;border-radius:50%;overflow:hidden;display:grid;place-items:center}
+.avatar .face svg{width:56px;height:56px}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.avatar .badge{
+  position:absolute;right:-2px;bottom:2px;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;
+  border:3px solid #fff;display:grid;place-items:center;
+}
+.avatar .badge svg{width:16px;height:16px}

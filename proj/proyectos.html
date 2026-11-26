@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#5271ff">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Proyectos y prácticas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages/proyectos.css">
+</head>
+<body>
+<main class="screen" data-page="proyectos">
+  <header class="hero">
+    <div class="hero-top">
+      <button class="icon-btn" id="back" type="button" aria-label="Volver"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <span class="step-label"></span>
+      <button class="icon-btn" id="logout" type="button" aria-label="Cerrar sesión"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg></button>
+    </div>
+    <h1>Proyectos / prácticas</h1>
+    <p>Muestra lo que has hecho</p>
+    <div class="steps" aria-hidden="true"></div>
+  </header>
+  <section class="scroll page-anim">
+    <div class="card">
+      <div class="field">
+        <label for="practicas">Prácticas realizadas:</label>
+        <div class="input-wrap"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg><input id="practicas" data-field="practicas" type="text" placeholder="Nombre de la práctica" autocomplete="off"></div>
+      </div>
+      <div class="field">
+        <label for="descripcion">Descripción de la práctica:</label>
+        <div class="input-wrap"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg><input id="descripcion" data-field="descripcion" type="text" placeholder="¿Qué hiciste?" autocomplete="off"></div>
+      </div>
+      <div class="field">
+        <span class="label">Evidencias:</span>
+        <div class="upload big" data-file="evidencias"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg><span class="file-name">Toca para subir fotos o documentos</span><input type="file" hidden multiple></div>
+      </div>
+    </div>
+  </section>
+  <footer class="actionbar"><button class="btn ghost" id="prev" type="button">Atrás</button><button class="btn primary" type="button" data-next>Continuar</button></footer>
+</main>
+<script src="js/core/utils.js"></script>
+<script src="js/core/storage.js"></script>
+<script src="js/core/ui.js"></script>
+<script src="js/core/components.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

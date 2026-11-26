@@ -1,0 +1,5 @@
+/* =====================================================
+   VENTANA: Intereses (intereses.html)
+   ===================================================== */
+.textarea-wrap{height:auto;align-items:flex-start;padding:12px 16px}
+textarea{width:100%;border:0;outline:0;background:none;resize:none;font-size:16px;min-height:120px;color:var(--ink);line-height:1.45}

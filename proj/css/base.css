@@ -1,0 +1,31 @@
+/* =====================================================
+   BASE – variables, reset y contenedor vertical
+   (se carga en TODAS las ventanas)
+   ===================================================== */
+:root{
+  --blue:#5271ff; --blue-d:#3f58e0; --sky:#3ab4ff;
+  --bg:#f3f5ff; --ink:#1b1f3b; --muted:#6b7194; --line:#dde2fb;
+  --danger:#ff4d6d; --ok:#18b67a;
+  --safe-t:env(safe-area-inset-top,0px);
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:'Open Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  background:var(--bg);color:var(--ink);
+  -webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased;
+  overscroll-behavior:none;
+}
+button,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+a{color:inherit}
+svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* ===== Contenedor vertical (sin marco de teléfono) =====
+   Ocupa toda la altura; en pantallas anchas queda como una
+   columna vertical centrada, sin borde, sin esquinas ni sombra. */
+.screen{
+  position:relative;width:100%;max-width:430px;height:100dvh;margin:0 auto;
+  background:var(--bg);overflow:hidden;display:flex;flex-direction:column;
+}

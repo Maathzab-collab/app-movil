@@ -1,0 +1,86 @@
+/* =====================================================
+   VENTANA: Mi portafolio (portafolio.html)
+   Vista tipo currículum + estilos de impresión (PDF)
+   ===================================================== */
+
+/* ---------- Avance ---------- */
+.progress{padding:16px 18px}
+.progress .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.progress .top strong{font-size:15px;font-weight:800}
+.progress .top span{font-size:20px;font-weight:800;color:var(--blue)}
+.bar{height:8px;border-radius:8px;background:#e7ebff;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--blue),var(--sky));transition:width .6s cubic-bezier(.2,.9,.3,1)}
+.progress .missing-title{font-size:13px;color:var(--muted);margin:12px 2px 0}
+.progress .suggest{margin-top:8px}
+.progress .done-msg{font-size:14px;color:var(--ok);font-weight:700;margin-top:10px}
+
+/* ---------- Currículum ---------- */
+.cv{background:#fff;border-radius:24px;padding:20px 18px 8px;box-shadow:0 8px 24px rgba(82,113,255,.12);margin-bottom:16px}
+.cv-head{display:flex;align-items:center;gap:14px;padding-bottom:16px;border-bottom:2px solid var(--line)}
+.cv-photo{width:78px;height:78px;border-radius:50%;overflow:hidden;flex:none;background:#eef1ff;color:var(--blue);display:grid;place-items:center;border:3px solid #fff;box-shadow:0 0 0 2px var(--line)}
+.cv-photo svg{width:38px;height:38px}
+.cv-photo img{width:100%;height:100%;object-fit:cover}
+.cv-id{min-width:0}
+.cv-name{font-size:22px;font-weight:800;line-height:1.15;word-break:break-word}
+.cv-sub{font-size:13.5px;color:var(--muted);margin-top:3px;word-break:break-word}
+
+.cv-sec{padding:16px 0;border-bottom:1px solid #eef0fb}
+.cv-sec:last-child{border-bottom:0}
+.cv-sec-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.cv-sec h2{font-size:12.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--blue)}
+.edit{width:34px;height:34px;border:0;border-radius:11px;background:#eef1ff;color:var(--blue);display:grid;place-items:center;flex:none}
+.edit:active{transform:scale(.9)}
+.edit svg{width:17px;height:17px}
+
+.cv-text{font-size:15px;line-height:1.55;white-space:pre-line;word-break:break-word}
+.entry{margin-bottom:12px}
+.entry:last-child{margin-bottom:0}
+.entry strong{display:block;font-size:15.5px;font-weight:700;word-break:break-word}
+.entry .sub{display:block;font-size:14px;color:#3b4166;word-break:break-word}
+.entry .meta{display:block;font-size:13px;color:var(--muted);margin-top:1px}
+.entry .desc{font-size:14.5px;line-height:1.5;margin-top:5px;white-space:pre-line;word-break:break-word}
+
+.kv{display:flex;gap:10px;font-size:14.5px;margin-bottom:7px;line-height:1.4}
+.kv:last-child{margin-bottom:0}
+.kv b{flex:none;width:98px;font-weight:700;color:#3b4166}
+.kv span{min-width:0;word-break:break-word}
+
+.group-label{font-size:13px;font-weight:700;color:#3b4166;margin:0 0 7px}
+.group-label:not(:first-child){margin-top:12px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{display:inline-flex;align-items:center;gap:6px;background:#eef1ff;color:var(--blue-d);border-radius:20px;padding:5px 12px;font-size:13.5px;font-weight:600;word-break:break-word}
+.tag.file{background:#effcf6;color:#0f8a5c}
+.tag.file svg{width:14px;height:14px}
+.entry .tags{margin-top:8px}
+
+/* Sección vacía (solo en pantalla) */
+.cv-sec.empty .empty-box{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:14px;color:var(--muted);background:#f5f7ff;border:1.5px dashed var(--line);border-radius:14px;padding:12px 14px}
+.cv-sec.empty .empty-box button{border:0;background:none;color:var(--blue);font-weight:800;font-size:14px;white-space:nowrap}
+
+/* ---------- Documentos personales ---------- */
+.docs{padding:16px 18px 10px}
+.docs h2{font-size:15px;font-weight:800}
+.docs .hint-text{margin:3px 0 12px}
+.doc-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid #eef0fb;font-size:14.5px}
+.doc-ico{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;flex:none;background:#fff3e0;color:#d98200}
+.doc-ico svg{width:17px;height:17px;stroke-width:2.5}
+.doc-row.ok .doc-ico{background:#e4f8ef;color:var(--ok)}
+.doc-row .t{flex:1;min-width:0}
+.doc-row .t b{display:block;font-weight:700}
+.doc-row .t span{display:block;color:var(--muted);font-size:13px;word-break:break-word}
+
+/* ---------- Impresión / Guardar como PDF ---------- */
+@page{size:A4;margin:14mm}
+@media print{
+  html,body{height:auto;background:#fff}
+  body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .screen{height:auto;max-width:none;overflow:visible;display:block;background:#fff}
+  .hero,.actionbar,.no-print,.blob,.toast,.sheet-backdrop,.edit,.cv-sec.empty{display:none!important}
+  .scroll{overflow:visible;margin:0;padding:0;animation:none!important}
+  .page-anim{animation:none!important}
+  .cv{box-shadow:none;border-radius:0;padding:0;margin:0}
+  .cv-sec{break-inside:avoid}
+  .cv-name{font-size:26px}
+  .cv-sec h2{border-bottom:1px solid var(--line);padding-bottom:4px;width:100%}
+  .cv-sec-head{display:block}
+}
